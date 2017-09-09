@@ -4,9 +4,6 @@ import classes.InstanceVariableInitialization;
 
 import java.lang.ref.WeakReference;
 
-/**
- * Created by amit on 25/6/17.
- */
 public class WeakReferenceDemo {
     public static void main(String[] args) {
         InstanceVariableInitialization instanceVariableInitialization = new InstanceVariableInitialization();

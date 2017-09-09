@@ -1,5 +1,7 @@
 package classes;
 
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
         Integer i1 = new Integer(2);
@@ -11,12 +13,11 @@ public class Test {
         //System.out.println(i3==i2);
         System.out.println(i3==i4);
 
-   /*    String s1 = "Amit";
-       String s2 = "AmitB";*/
-  /*    String s2 = "AmitBE";*/
-      // String s3 = "B";
-       //String s4 = "Amit" + s3 + "E";
-       // System.out.println(s4==s2);
+         String s1 = "gdghdh0.545hjdhd6665";
+         String[] s2 = s1.replaceAll("[^0-9]+"," ").trim().split(" ");
+         Integer i5 = Arrays.stream(s2).mapToInt(Integer::valueOf).sum();
+         System.out.println(i5);
+
 
     }
 }
