@@ -1,23 +1,32 @@
 package classes;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-public class Test {
+public class Test<T extends CharSequence> {
+    static Integer i;
+
     public static void main(String[] args) {
-        Integer i1 = new Integer(2);
-        Integer i2 = new Integer(2);
-        Integer i3 = 228;
-        Integer i4 = 228;
 
-        System.out.println(i1==i2);
-        //System.out.println(i3==i2);
-        System.out.println(i3==i4);
+        Test<CharSequence> test= new Test<>();
+        test.toString();
 
-         String s1 = "gdghdh0.545hjdhd6665";
-         String[] s2 = s1.replaceAll("[^0-9]+"," ").trim().split(" ");
-         Integer i5 = Arrays.stream(s2).mapToInt(Integer::valueOf).sum();
-         System.out.println(i5);
-
+//        Object[] objects = {new Integer(5), 10, new String("Amit"), new ArrayList<>(), new Object()};
+//        Arrays.sort(objects);
+//        System.out.println("objects ::: " + objects);
+//        List<String> strList = new ArrayList<>();
+//        strList.add("A");
+//        strList.add("B");
+//        strList.add("C");
+//        display(strList);
 
     }
+
+    public void display(Class<T> aTClass) throws Exception{
+        T test= aTClass.newInstance();
+    }
+
+
 }
